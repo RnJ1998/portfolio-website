@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google Tag Manager -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-937K718VK1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-937K718VK1');
+    </script>
+    <link rel="stylesheet" id="silktide-consent-manager-css" href="silktide-consent-manager.css">
+    <script src="silktide-consent-manager.js"></script>
+    <script>
+silktideCookieBannerManager.updateCookieBannerConfig({
+  background: {
+    showBackground: true
+  },
+  cookieIcon: {
+    position: "bottomLeft"
+  },
+  cookieTypes: [
+    {
+      id: "necessary",
+      name: "Necessary",
+      description: "<p>These cookies are necessary for the website to function properly and cannot be switched off. They help with things like logging in and setting your privacy preferences.</p>",
+      required: true,
+      onAccept: function() {
+        console.log('Add logic for the required Necessary here');
+      }
+    },
+    {
+      id: "analytics",
+      name: "Analytical",
+      description: "<p>These cookies help us improve the site by tracking which pages are most popular and how visitors move around the site.</p>",
+      defaultValue: true,
+      onAccept: function() {
+        gtag('consent', 'update', {
+          analytics_storage: 'granted',
+        });
+        dataLayer.push({
+          'event': 'consent_accepted_analytics',
+        });
+      },
+      onReject: function() {
+        gtag('consent', 'update', {
+          analytics_storage: 'denied',
+        });
+      }
+    },
+    {
+      id: "advertising",
+      name: "Advertising",
+      description: "<p>These cookies provide extra features and personalization to improve your experience. They may be set by us or by partners whose services we use.</p>",
+      onAccept: function() {
+        gtag('consent', 'update', {
+          ad_storage: 'granted',
+          ad_user_data: 'granted',
+          ad_personalization: 'granted',
+        });
+        dataLayer.push({
+          'event': 'consent_accepted_advertising',
+        });
+      },
+      onReject: function() {
+        gtag('consent', 'update', {
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied',
+        });
+      }
+    }
+  ],
+  text: {
+    banner: {
+      description: "<p>We use cookies on our site to enhance your user experience, provide personalized content, and analyze our traffic. <a href=\"https://your-website.com/cookie-policy\" target=\"_blank\">Cookie Policy.</a></p>",
+      acceptAllButtonText: "Accept all",
+      acceptAllButtonAccessibleLabel: "Accept all cookies",
+      rejectNonEssentialButtonText: "Reject non-essential",
+      rejectNonEssentialButtonAccessibleLabel: "Reject non-essential",
+      preferencesButtonText: "Preferences",
+      preferencesButtonAccessibleLabel: "Toggle preferences"
+    },
+    preferences: {
+      title: "Customize your cookie preferences",
+      description: "<p>We respect your right to privacy. You can choose not to allow some types of cookies. Your cookie preferences will apply across our website.</p>",
+      creditLinkText: "Get this banner for free",
+      creditLinkAccessibleLabel: "Get this banner for free"
+    }
+  },
+  position: {
+    banner: "bottomCenter"
+  }
+});
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janne Riikonen - Projects</title>
+    <style>
+        /* Basic CSS for a clean, professional look - Adapted from index.html */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 15px auto; /* Reduced top/bottom margin */
+            padding: 15px; /* Reduced padding */
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px; /* Reduced margin */
+        }
+        h1 { /* Page Title */
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 8px; /* Reduced margin */
+        }
+        h2 { /* Section Titles (Asiakasyritys X / Category) */
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-top: 25px; /* Reduced margin */
+            margin-bottom: 15px; /* Reduced margin */
+        }
+        h3 { /* Project Titles */
+            color: #34495e;
+            margin-top: 0;
+            margin-bottom: 4px; /* Reduced margin */
+        }
+        section { /* Container for projects under one H2 */
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        ul { /* For lorem ipsum bullet points */
+            list-style: none;
+            padding: 0;
+            margin-top: 8px; /* Reduced margin */
+        }
+        ul li {
+            margin-bottom: 4px; /* Reduced margin */
+            position: relative;
+            padding-left: 20px;
+        }
+        ul li::before {
+            content: '•';
+            color: #3498db;
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+        .project-item {
+            margin-bottom: 15px; /* Reduced margin */
+            padding-bottom: 15px; /* Reduced padding */
+            border-bottom: 1px solid #eee;
+        }
+        .project-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .project-date {
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 6px; /* Reduced margin */
+        }
+        .project-tech {
+            font-size: 0.9em;
+            margin-top: 10px; /* Reduced margin */
+            margin-bottom: 8px; /* Reduced margin */
+            color: #555;
+        }
+        .project-tech strong {
+            color: #34495e;
+        }
+        .tech-tag {
+            background-color: #e0f2f7;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            color: #2980b9;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+        .back-link {
+            text-align: center;
+            margin-top: 30px; /* Reduced margin */
+            padding-top: 15px; /* Reduced padding */
+            border-top: 1px solid #ddd;
+        }
+        .back-link a {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+        }
+        .back-link a:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Projects</h1>
+    </header>
+
+    <section>
+        <h2>Introduction</h2>
+        <p>This page showcases a selection of my professional work, highlighting my skills in electrical automation design, network design, and project management. Each project demonstrates my ability to apply technical knowledge to solve real-world challenges for various clients.</p>
+    </section>
+
+    <section>
+        <h2>Electrical Automation Design</h2>
+        <div class="project-item">
+            <h3>Industrial Process Automation &amp; Modernization</h3>
+            <p class="project-date">2023 – Present</p>
+            <ul>
+                <li>Executed electrical and automation design for maintenance, modernization, and new process section projects across various industrial sites.</li>
+                <li>Responsibilities included designing new motor and instrument circuits, field cabinet layouts, and control room HMI updates.</li>
+                <li>Managed logic integration, software compatibility, and seamless integration of new equipment with existing automation systems.</li>
+            </ul>
+            <p class="project-tech"><strong>Technologies:</strong> <span class="tech-tag">CADMATIC</span><span class="tech-tag">ABB DOC</span><span class="tech-tag">SIMATIC STEP7 / TIA Portal</span><span class="tech-tag">InTouch</span><span class="tech-tag">LOGO!</span></p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Commissioning Work</h2>
+        <div class="project-item">
+            <h3>Multiple Projects</h3>
+            <p class="project-date">2024 – Present</p>
+            <ul>
+                <li>Comissioning work related to new equipment and modernization.</li>
+            </ul>
+            <p class="project-tech"><strong>Technologies:</strong> <span class="tech-tag">Valmet, Siemens, WAGO, ABB, Honeywell -I/O systems </span></p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Railway Bridge Control Modernizations</h2>
+        <div class="project-item">
+            <h3>Railway Bridge Control System Modernization</h3>
+            <p class="project-date">2023 – Present</p>
+            <ul>
+                <li>Oversaw the modernization of railway bridge control systems, including the design of new instrumentation and field cabinets.</li>
+                <li>Successfully integrated legacy bridge equipment with the new control system to ensure seamless operation.</li>
+            </ul>
+            <p class="project-tech"><strong>Technologies:</strong> <span class="tech-tag">CADMATIC</span></p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Medium Voltage Switchgear, Substation Secondary Design</h2>
+        <div class="project-item">
+            <h3>Multiple Projects with Similar Scope</h3>
+            <p class="project-date">2023 – Present</p>
+            <ul>
+                <li>Switchgear integration to SCADA system.</li>
+                <li>Control cabinet design and integration.</li>
+                <li>Protection relay control circuit design.</li>
+                <li>Substation building basic/layout design.</li>
+            </ul>
+            <p class="project-tech"><strong>Technologies:</strong> <span class="tech-tag">ABB DOC</span><span class="tech-tag">CADMATIC</span><span class="tech-tag">M-FILES</span></p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Network Design</h2>
+        <div class="project-item">
+            <h3>Distribution Network Design in Rural Areas</h3>
+            <p class="project-date">11.2021 – 01.2022</p>
+            <ul>
+                <li>Modernization of existing network components.</li>
+                <li>Power flow calculations and component dimensioning.</li>
+                <li>Protection calculations.</li>
+            </ul>
+            <p class="project-tech"><strong>Technologies:</strong> <span class="tech-tag">Trimble NIS</span></p>
+        </div>
+        <div class="project-item">
+            <h3>Distribution Network Design, Industrial Network</h3>
+            <p class="project-date">2.2025 – 4.2025</p>
+            <ul>
+                <li>New industrial network components dimensioning.</li>
+                <li>Power flow and protections calculations.</li>
+            </ul>
+            <p class="project-tech"><strong>Technologies:</strong> <span class="tech-tag">ABB DOC</span><span class="tech-tag">ETAP</span></p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Power Quality and Analysis</h2>
+        <div class="project-item">
+            <h3>Multiple Projects</h3>
+            <p class="project-date">2023 –</p>
+            <ul>
+                <li>Analysis of power quality issues in industrial and distribution networks.</li>
+                <li>Harmonic analysis, flicker measurements, and voltage dip assessments.</li>
+                <li>Recommendations for mitigation techniques.</li>
+            </ul>
+            <p class="project-tech"><strong>Technologies:</strong> <span class="tech-tag">TOPVIEW Analyzing Software</span><span class="tech-tag">Data Analysis Tools</span></p>
+        </div>
+    </section>
+
+    <div class="back-link">
+        <a href="index.html">Back to Resume</a>
+    </div>
+
+</body>
+</html>
