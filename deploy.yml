@@ -38,7 +38,7 @@ jobs:
         with:
           # This should be the path to your build output directory.
           # The default for most projects is 'dist'. Check your webpack.config.js if unsure.
-          path: ./dist
+          path: ./public
 
   # This job deploys the artifact to GitHub Pages
   deploy:
