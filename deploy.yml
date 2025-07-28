@@ -1,0 +1,54 @@
+# Name of the workflow
+name: Deploy Portfolio Website to GitHub Pages
+
+# This workflow runs automatically on any push to the 'main' branch
+on:
+  push:
+    branches:
+      - main
+
+# Allow this job to clone the repo and create a page deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  # This job builds your site, similar to the 'build' phase in your buildspec.yml
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # You can change this to your project's Node.js version
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the project
+        run: npm run build
+
+      - name: Upload build artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # This should be the path to your build output directory.
+          # The default for most projects is 'dist'. Check your webpack.config.js if unsure.
+          path: ./dist
+
+  # This job deploys the artifact to GitHub Pages
+  deploy:
+    # It needs the 'build' job to complete successfully first
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
