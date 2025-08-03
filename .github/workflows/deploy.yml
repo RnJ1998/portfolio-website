@@ -1,11 +1,11 @@
 # Name of the workflow
 name: Deploy Portfolio Website to GitHub Pages
 
-# This workflow runs automatically on any push to the 'main' branch
+# This workflow runs automatically on any push to the 'master' branch
 on:
   push:
     branches:
-      - main
+      - master
 
 # Allow this job to clone the repo and create a page deployment
 permissions:
