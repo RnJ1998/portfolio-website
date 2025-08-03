@@ -1,10 +1,16 @@
 # riikonen.site
 
-This is one of two repositories created for my portfolio website <a href="https://henryheffernan.com/"><samp>henryheffernan.com</samp></a>. If you are looking for the 2D OS repository you can find it <a href="https://github.com/henryjeff/portfolio-inner-site"><samp>here</samp></a>! Thanks for taking the time to check this out. If you have any questions of comments, feel free to shoot me an email at <samp><a href="mailto:henryheffernan@gmail.com">henryheffernan@gmail.com</a></samp> or you can DM me on twitter <a href="https://twitter.com/henryheffernan"><samp>@henryheffernan</samp></a>.
+This is the repository for my portfolio website <a href="https://riikonen.site"><samp>riikonen.site</samp></a>.
+
+This project is based on the fantastic portfolio created by <a href="https://henryheffernan.com/"><samp>Henry Heffernan</samp></a>. A huge thank you to him for making his work open source! If you are looking for the original repository, you can find it <a href="https://github.com/henryjeff/portfolio-website"><samp>here</samp></a>.
+
+My implementation is hosted on GitHub Pages, and currently does not include the 2D operating system he has in the original.</a>.
 
 <br>
 
-To setup a dev environment:
+## Development
+
+To set up a dev environment:
 
 ```bash
 # Clone the repository
