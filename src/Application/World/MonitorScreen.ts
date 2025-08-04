@@ -185,7 +185,7 @@ export default class MonitorScreen extends EventEmitter {
         // Set iframe attributes
         // PROD
         //iframe.src = 'https://rnj1998.github.io/OnlineResume/';
-        iframe.src = 'rnj1998.github.io/portfolio-inner-site/';
+        iframe.src = 'https://rnj1998.github.io/portfolio-inner-site/';
         /**
          * Use dev server is query params are present
          *
